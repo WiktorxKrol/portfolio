@@ -1,14 +1,14 @@
-# Coordinating an external partner integration against a hard deadline
+## Managing an external partner integration under a hard deadline
 
-**Context:** An integration between our platform and a large external marketplace partner had to be functional before a real-world, date-fixed event — complicated by the partner's own team going on leave right before that date, with credentials and access scattered across several different partner-side owners.
+> **In one line:** I built and drove a checklist of external dependencies to unblock a partner integration before a fixed, real-world deadline — with the partner's own team about to be unavailable.
 
-**Problem:** No single person on the partner side could hand over everything at once. Waiting for a coordinated handoff meeting would have missed the window entirely.
+**Situation.** An integration with a large external marketplace partner had to be working before a fixed, real-world event. To make it harder, the partner's team was about to go on leave right before that date, and access credentials were spread across several different people on their side. Waiting for one coordinated handoff meeting would have missed the deadline completely.
 
-**What I did:**
-- Built a checklist of every external dependency blocking the integration (API keys, staging credentials, cloud environment access, which repository the work should live in), each with a named owner and an urgency flag.
-- Chased each item individually and in parallel rather than waiting for one meeting to resolve all of them.
-- Kept a visible running list of what was resolved vs. still blocking, so the team always knew exactly what was standing between them and a working integration.
+**What I did.**
+- Built a clear checklist of every external dependency blocking the integration: API keys, staging credentials, cloud access, and which repository the work should live in — each item with a named owner and an urgency level.
+- Followed up on each item individually and in parallel, instead of waiting for a single meeting to resolve everything at once.
+- Kept a visible, up-to-date status of what was resolved and what was still blocking, so the team always knew exactly what stood between them and a working integration.
 
-**Outcome:** Every blocking access item was cleared before the partner's team went on leave, and the integration was functional ahead of the fixed external deadline.
+**Result.** Every blocking access item was resolved before the partner's team went on leave, and the integration was delivered ahead of the external deadline.
 
-**Skills:** external stakeholder management, parallelized blocker-chasing, working a hard deadline backwards into a checklist.
+**Skills:** external stakeholder management, risk mitigation, deadline-driven execution, cross-functional coordination.
