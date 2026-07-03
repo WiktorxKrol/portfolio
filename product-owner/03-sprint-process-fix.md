@@ -1,15 +1,15 @@
-# Fixing a broken sprint process
+## Fixing a broken sprint process
 
-**Context:** A ~15-person engineering team whose sprint process had quietly stopped working — inconsistent estimation, unclear sprint-boundary rules, and backlog debt silently rolling forward sprint after sprint without anyone noticing the pattern.
+> **In one line:** I replaced a sprint process that looked fine on paper but hid real problems, with a small set of clear rules that made the team's actual capacity visible again.
 
-**Problem:** Capacity numbers looked fine on paper but didn't reflect reality — unestimated work was invisible in planning, "sprint end" meant whatever due-date happened to be sitting in the tracker, and work in review/testing was being shuffled between sprints as if it were still open, hiding how much was actually stuck.
+**Situation.** A team of about 15 engineers had a sprint process that had quietly stopped working. Estimation was inconsistent, the definition of "end of sprint" was unclear, and unfinished work kept rolling forward without anyone tracking the pattern. Capacity numbers looked normal, but they did not reflect reality.
 
-**What I did — a small number of hard rules instead of a process overhaul:**
-- Unestimated tickets get a fixed placeholder value in capacity math, so they show up as a cost instead of disappearing from the total.
-- Sprint boundary is a fixed day and time, not whatever due-date is in the tracker — removes the ambiguity that let work quietly slip.
-- Only genuinely open work moves between sprints. Work sitting in review, testing, or code-review never gets moved — moving it papered over the fact that it wasn't actually progressing.
-- Set and tracked an explicit committed throughput floor for the team's most chronically overdue work area, so "we'll get to it" had a number attached.
+**What I did — introduced a small number of high-leverage rules instead of a full process overhaul:**
+- Tasks without an estimate get a fixed placeholder value in capacity planning, so they are visible as a cost instead of disappearing from the total.
+- The sprint boundary is now a fixed day and time, not whatever due date happens to be in the tracker — this removed a common source of confusion.
+- Only tasks that are genuinely open move between sprints. Work still in review or testing stays where it is, so it does not look like progress when it is not.
+- Set and tracked a clear, minimum weekly output target for the team's most overdue area of work, so "we'll get to it eventually" had a number attached to it.
 
-**Outcome:** Capacity numbers became trustworthy again — planning reflected what the team could actually deliver, not what the tracker's due-dates implied. The chronically overdue work area started closing a minimum number of items every sprint instead of zero.
+**Result.** Capacity planning became trustworthy again and reflected what the team could actually deliver. The chronically overdue work area started closing a guaranteed minimum number of tasks every sprint, instead of zero.
 
-**Skills:** process diagnosis, choosing minimal high-leverage rules over a full re-org, making invisible debt visible.
+**Skills:** process improvement, data-driven decision making, team capacity planning, stakeholder communication.
