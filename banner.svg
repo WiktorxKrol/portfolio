@@ -1,0 +1,7 @@
+<svg width="1200" height="360" viewBox="0 0 1200 360" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="360" fill="#FFFFFF"/>
+  <text x="600" y="150" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-size="72" font-weight="600" letter-spacing="-2" fill="#1D1D1F">Wiktor Król</text>
+  <text x="600" y="200" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-size="26" font-weight="400" fill="#1D1D1F">Product judgment. Data to prove it.</text>
+  <line x1="500" y1="238" x2="700" y2="238" stroke="#0071E3" stroke-width="3"/>
+  <text x="600" y="272" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="600" letter-spacing="1.5" fill="#86868B">PRODUCT OWNER · BUSINESS ANALYST · DATA ANALYST</text>
+</svg>
