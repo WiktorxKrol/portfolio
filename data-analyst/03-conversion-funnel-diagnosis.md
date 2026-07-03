@@ -1,13 +1,13 @@
-# Conversion funnel diagnosis
+## Conversion funnel diagnosis
 
-**Context:** A self-serve SaaS platform saw a sharp, sustained drop in new paying customers over several months, with no clear owner of "why" and pressure to just spend more on acquisition.
+> **In one line:** I used funnel analysis to find exactly where a SaaS platform was losing customers, and reframed a vague "acquisition problem" into a specific, data-backed diagnosis.
 
-**Problem:** "Acquisition dropped" is not an actionable statement — it could mean fewer visitors, fewer signups, fewer people finishing onboarding, or fewer people converting to paid, and each of those implies a completely different fix.
+**Situation.** A self-serve SaaS platform saw a sharp, sustained drop in new paying customers over several months. There was no clear owner of "why," and pressure to simply spend more on acquisition instead of investigating the actual cause.
 
-**What I did:**
-- Used the funnel view described in the [GA4 → BigQuery pipeline case study](./01-ga4-bigquery-pipeline.md) to break the funnel into its actual stages: visit → registration → product created → product published → paid.
-- Isolated exactly where the drop was concentrated: the large majority of registered users successfully created something in the product, a much smaller fraction published it, and almost none converted to a paying plan — the drop was not evenly spread across the funnel, it was concentrated at the activation and monetization stages.
+**What I did.**
+- Used the funnel view described in the [GA4-to-BigQuery pipeline case study](./01-ga4-bigquery-pipeline.md) to break the customer journey into clear stages: visit, registration, product created, product published, paid.
+- Measured each stage separately and found the drop was not spread evenly across the funnel. Most users who registered successfully created something in the product, a much smaller share published it, and almost none converted to a paying plan.
 
-**Outcome:** Reframed the conversation from "we have an acquisition problem, spend more on ads" to "we have an activation/monetization problem," which redirected the team's actual roadmap toward fixing the real bottleneck instead of pouring more traffic into a leaky funnel.
+**Result.** Reframed the conversation from "we have an acquisition problem, spend more on marketing" to "we have an activation and monetization problem." This redirected the team's roadmap toward the actual bottleneck and delivered measurable, actionable insights instead of more unfocused spending.
 
-**Skills:** funnel decomposition, distinguishing correlation from the actual point of failure, translating a vague business complaint into a specific, data-backed diagnosis.
+**Skills:** funnel analysis, SQL, root-cause analysis, translating data into business recommendations.
