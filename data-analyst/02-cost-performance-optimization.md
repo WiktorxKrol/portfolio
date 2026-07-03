@@ -1,14 +1,14 @@
-# BigQuery cost & performance optimization
+## BigQuery cost and performance optimization
 
-**Context:** Dashboards querying raw GA4 daily-sharded tables directly, on a dataset that grows every day.
+> **In one line:** I redesigned how dashboards query BigQuery so cost stopped scaling with the size of the full historical dataset, and load times became predictable.
 
-**Problem:** Querying raw event-level data straight from a dashboard gets slower and more expensive every day the underlying table grows, and it's the kind of cost that creeps up silently until someone notices the bill.
+**Situation.** Dashboards were querying raw, daily-sharded GA4 tables directly, on a dataset that grows every day. This gets slower and more expensive as the table grows, and the cost tends to creep up silently until someone notices the bill.
 
-**What I did:**
-- Built a scheduled query that runs once daily and pre-aggregates raw events into summary tables, so dashboards query a small aggregate instead of scanning raw history every time they load.
-- Replaced wildcard table scans (`events_*`) with `_TABLE_SUFFIX BETWEEN` date-bounded scans wherever a query only needed a known date range.
-- Enforced column pruning — selecting only the columns a query actually needed instead of `SELECT *` — and clustered aggregate tables by `event_name`, the most common filter predicate.
+**What I did.**
+- Built a scheduled query that runs once a day and pre-aggregates raw events into summary tables, so dashboards query a small, ready-made table instead of scanning the full raw history every time they load.
+- Replaced full-table wildcard scans with date-bounded scans wherever a query only needed a specific, known date range.
+- Enforced column selection best practices (never selecting unnecessary columns) and organized the aggregate tables by the most common filter field, to speed up queries further.
 
-**Outcome:** Dashboard load times became predictable and cost stopped scaling with the size of the full historical dataset.
+**Result.** Dashboard load times became fast and predictable, and query cost stopped scaling with the size of the full historical dataset — a clear, measurable, scalable improvement.
 
-**Skills:** BigQuery cost model (bytes scanned, not rows), scheduled query design, clustering/partitioning strategy, translating "slow dashboard" complaints into a specific bytes-scanned root cause.
+**Skills:** BigQuery cost optimization, SQL performance tuning, scheduled query design, data warehousing best practices.
