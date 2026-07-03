@@ -1,16 +1,16 @@
-# Backlog consistency & traceability review
+## Backlog consistency and traceability review
 
-**Context:** A backlog for a new product had grown quickly — around 45 items across multiple epics, written over a short period. Fast-written backlogs are exactly where silent gaps hide: a frontend flow that promises a step no backend task actually implements, or two near-identical flows that behave inconsistently without anyone noticing.
+> **In one line:** I found three real, silent gaps in a fast-growing backlog by checking requirements against each other, not just one at a time — and closed all three before they reached a sprint.
 
-**Problem:** Individually, every ticket looked reasonable. The problem only shows up when you read them against each other.
+**Situation.** A backlog for a new product had grown quickly to around 45 items across multiple epics, written over a short period. Backlogs written fast are exactly where silent gaps hide: a frontend flow that promises a step no backend task actually delivers, or two similar flows that behave inconsistently without anyone noticing.
 
-**What I did — read every requirement against its neighbors, not in isolation — and found:**
-1. A frontend flow that explicitly promised "send the contract to the tenant for approval, then activate it," with no backend ticket anywhere that actually implemented tenant-side approval or the activation trigger.
-2. Two near-identical flows (contract termination vs. contract amendment) where one notified the affected party as part of its spec and the other silently didn't — an inconsistency that would only surface in production.
-3. A technical dependency (e-signature validity) that one ticket flagged as "pending legal confirmation," but no legal ticket in the backlog actually asked the question — it existed as an assumption with no owner.
+**What I did — reviewed every requirement against its neighbors, not in isolation, and found:**
+1. A frontend flow that explicitly promised "send the contract to the tenant for approval, then activate it," with no backend task anywhere that actually implemented tenant-side approval or the activation step.
+2. Two nearly identical flows (contract termination and contract amendment) where one included a tenant notification as part of the requirement, and the other silently did not — an inconsistency that would only surface after launch.
+3. A technical dependency (e-signature validity) that one task flagged as "pending legal confirmation," but no legal task in the backlog actually asked that question — it existed as an unowned assumption.
 
-**What I did about it:** wrote the missing backend ticket, aligned the two inconsistent flows to the same notification behavior, and added the missing legal question to the right owner's queue instead of leaving it as an unstated assumption.
+**What I did about it.** Wrote the missing backend task, aligned the two inconsistent flows to the same notification behavior, and added the missing legal question to the right owner's queue instead of leaving it as an unstated assumption.
 
-**Outcome:** All three gaps were closed before they reached a sprint, instead of being discovered by an engineer mid-implementation or, worse, by a user in production.
+**Result.** All three gaps were closed before reaching a sprint, instead of being discovered by an engineer mid-build, or by a customer in production.
 
-**Skills:** cross-referencing requirements for logical completeness rather than reviewing tickets one at a time, spotting silent inconsistency between superficially similar features, distinguishing a confirmed requirement from an unstated assumption.
+**Skills:** requirements traceability, cross-referencing for logical completeness, gap analysis, attention to detail.
