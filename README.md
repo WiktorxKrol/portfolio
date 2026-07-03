@@ -1,13 +1,30 @@
-# Wiktor Król
+![Wiktor Król](./banner.svg)
 
-Product Owner / Business Analyst with hands-on data engineering skills (SQL, GA4, BigQuery). I work across the full product lifecycle — from scoping a brand-new product to running the analytics that tell you whether it's working.
+**Product Owner / Business Analyst with hands-on Data Analytics skills (SQL, GA4, BigQuery).**
 
-This repo is organized by the lens you're evaluating me through. Pick one:
+I take end-to-end ownership of a product — from the first requirement to the dashboard that proves the decision was right. I am comfortable working in cross-functional teams, managing stakeholder alignment, and using data-driven decision making instead of guessing.
 
-- **[Product Owner](./product-owner/)** — scoping, prioritization, running multiple products/teams at once
-- **[Business Analyst](./business-analyst/)** — requirements, edge cases, backlog consistency
-- **[Data Analyst](./data-analyst/)** — GA4 → BigQuery pipelines, funnel analysis, cost optimization
+## In short
 
-All case studies are based on real work. Company/client names and exact confidential figures have been generalized — the mechanics, the decisions, and the outcomes are real.
+| | |
+|---|---|
+| **~70** tasks | Scoped from a blank page into a full, estimated backlog — in days, not weeks. |
+| **80+** edge cases | Found and documented before engineering wrote a single line of code. |
+| **1** analytics pipeline | Connects website data (GA4) and business data (internal database), used every week to guide decisions. |
 
-Contact: wiktorkrol@gmail.com
+## Read me as
+
+Pick the version that matches the role you are hiring for. It is the same work — just a different focus for each audience.
+
+- 🧭 **[Product Owner](./product-owner/)** — I scope projects, manage stakeholders, and keep several products moving forward at the same time.
+- 🔍 **[Business Analyst](./business-analyst/)** — I turn ideas into clear, complete requirements, so engineering does not discover missing rules mid-sprint.
+- 📊 **[Data Analyst](./data-analyst/)** — I build the SQL pipelines and dashboards that turn raw data into actionable insights.
+
+## Contact
+
+- **Email:** wiktorkrol@gmail.com
+- **LinkedIn:** [pl.linkedin.com/in/wiktor-krol](https://pl.linkedin.com/in/wiktor-krol/pl)
+
+---
+
+*All case studies below describe real projects. Company names and confidential figures have been generalized to protect client privacy — the process, the decisions, and the results are real.*
