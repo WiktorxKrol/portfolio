@@ -1,15 +1,15 @@
-# Requirements & edge case discovery for a new product
+## Requirements and edge case discovery for a new product
 
-**Context:** A brand-new SaaS product (property rental management) at the concept stage — a design mockup and a strategy document, nothing else.
+> **In one line:** I catalogued 80+ edge cases and business rules for a new product before engineering started building, so ambiguous "what happens if..." questions were answered up front.
 
-**Problem:** Nothing had been formally specified. Every core flow (contract signing, deposits, notice periods, maintenance requests, meter readings, marketplace bookings) had obvious happy-path behavior in the mockup, but no answer for what happens when things don't go as planned.
+**Situation.** A new SaaS product (property rental management) existed only as a design mockup and a strategy document. Every core flow — contract signing, deposits, notice periods, maintenance requests, meter readings, marketplace bookings — had clear happy-path behavior in the mockup, but no answer for what happens when something goes wrong.
 
-**What I did:**
-- Walked every core flow and systematically catalogued 80+ edge cases across 10 functional modules — what happens on a disputed handover protocol, a partial rent payment, an expired invitation link, a tenant with two active roles, and so on.
-- Extracted explicit business rules where the mockup only implied behavior (e.g., what counts as a payment default, what the default notice period is) and documented them as named, referenceable rules rather than leaving them as tribal knowledge.
-- Flagged the subset of business rules that were genuinely legal questions (contract validity, statutory deposit limits, e-signature validity) rather than product decisions, and routed them to outside legal counsel instead of guessing.
-- Fed the edge cases directly into the engineering backlog as scoped tasks, not as a separate document nobody would read.
+**What I did.**
+- Reviewed every core flow in detail and documented over 80 edge cases across 10 functional modules: for example, what happens with a disputed handover protocol, a partial rent payment, an expired invitation link, or a tenant who has two different roles in the system.
+- Extracted business rules that were only implied in the mockup — for example, what counts as a missed payment, or what the default notice period is — and wrote them down as named, referenceable rules instead of leaving them as unwritten assumptions.
+- Identified which business rules were actually legal questions (contract validity, statutory deposit limits, e-signature requirements) and routed them to outside legal counsel, instead of letting engineering guess the answer.
+- Fed every edge case directly into the engineering backlog as a scoped task, so the analysis led to action instead of sitting in a separate document.
 
-**Outcome:** Engineering started building against a backlog with the ambiguous "what happens if..." questions already answered, instead of discovering them mid-sprint. Legal-dependent assumptions were explicitly labeled as assumptions pending confirmation, not silently treated as fact.
+**Result.** Engineering started building against a backlog where the difficult "what happens if..." questions were already answered. Legal-dependent assumptions were clearly labeled as pending confirmation, not treated as fact by mistake.
 
-**Skills:** requirements elicitation from unstructured source material (mockups, strategy docs), edge-case enumeration, extracting implicit business rules and making them explicit, distinguishing product decisions from legal questions.
+**Skills:** requirements elicitation, edge case analysis, business rule definition, cross-functional collaboration with legal and engineering.
