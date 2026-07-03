@@ -14,17 +14,18 @@ I take end-to-end ownership of a product — from the first requirement to the d
 
 ## Read me as
 
-Pick the version that matches the role you are hiring for. It is the same work — just a different focus for each audience.
+Pick the version that matches the role you're hiring for — same work, different focus for each audience. Every case study opens with the result; tap **▸** on a section if you want to see how I got there.
 
-- 🧭 **[Product Owner](./product-owner/)** — I scope projects, manage stakeholders, and keep several products moving forward at the same time.
-- 🔍 **[Business Analyst](./business-analyst/)** — I turn ideas into clear, complete requirements, so engineering does not discover missing rules mid-sprint.
-- 📊 **[Data Analyst](./data-analyst/)** — I build the SQL pipelines and dashboards that turn raw data into actionable insights.
+- ⭐ 🧭 **[Product Owner](./product-owner/)** `~5 min` — I scope projects, manage stakeholders, and keep several products moving forward at the same time.
+- 🔍 **[Business Analyst](./business-analyst/)** `~4 min` — I turn ideas into clear, complete requirements, so engineering doesn't discover missing rules mid-sprint.
+- 📊 **[Data Analyst](./data-analyst/)** `~4 min` — I build the SQL pipelines and dashboards that turn raw data into actionable insights.
+
+Short on time? Start with **[the zero-to-one launch](./product-owner/01-zero-to-one-launch.md)** `~2 min` — it's the one case study that touches all three skill sets.
 
 ## Contact
 
-- **Email:** wiktorkrol@gmail.com
-- **LinkedIn:** [pl.linkedin.com/in/wiktor-krol](https://pl.linkedin.com/in/wiktor-krol/pl)
+📧 **[wiktorkrol@gmail.com](mailto:wiktorkrol@gmail.com)** &nbsp;·&nbsp; 💼 **[LinkedIn](https://pl.linkedin.com/in/wiktor-krol/pl)**
 
 ---
 
-*All case studies below describe real projects. Company names and confidential figures have been generalized to protect client privacy — the process, the decisions, and the results are real.*
+*All case studies linked above describe real projects. Company names and confidential figures have been generalized to protect client privacy — the process, the decisions, and the results are real.*
