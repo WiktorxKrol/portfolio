@@ -1,27 +1,33 @@
 ## Edge case discovery for a rental property management app
 
-> **In one line:** I documented 80+ edge cases across 10 modules of a new proptech app before engineering started - so the difficult "what happens if…" questions were answered before anyone wrote a line of code.
+I start looking for edge cases before developers ask questions. That's the point - if a developer is asking, I'm already late.
 
-**Situation.** A rental property management app (for landlords, tenants, and property managers) existed only as a design mockup. Every core flow had a clear happy path in the mockup - contract signing, deposits, notice periods, maintenance requests, meter readings, marketplace bookings. None of them had answers for failure states, conflict states, or ambiguous real-world situations.
+Happy paths are easy. Anyone can plan a happy path by looking at a design. The hard part is sad paths: what breaks this flow, who owns it when it breaks, and what should the system do about it.
 
-**What I did.**
+---
 
-Reviewed every flow systematically - not just "does this make sense on screen" but "what breaks this, and who owns it when it breaks."
+**Why rental platforms have more edge cases than most.**
 
-Examples of edge cases documented:
+A rental platform has multiple user roles interacting with the same data. A landlord and a tenant both touch the same contract, the same payment, the same property. When their actions conflict or overlap, the system needs a defined answer.
 
-- **Disputed handover protocol** - tenant and landlord both submit different meter readings at move-in. Which one is authoritative? Who can override? What's the audit trail?
-- **Partial rent payment** - tenant pays 80% of the monthly rent. Does the system accept it, reject it, or flag it as a debt? What notification goes to the landlord?
-- **Tenant with two roles** - a person is both a tenant in one property and a property manager in another. The system needs two separate permission contexts for the same account.
-- **Expired invitation link** - a landlord invites a tenant, but the tenant clicks the link 5 days later. What happens? Does re-sending create a duplicate account?
-- **E-signature validity** - is a digitally signed contract via our platform legally enforceable in the target jurisdiction? This is not a product decision - I flagged it to external legal counsel instead of letting engineering assume the answer.
+Some examples from this project:
 
-**How I organized the output.**
+- **Tenant with two roles** - a person can be a tenant in one property and a property manager in another. That's one account, two permission contexts. The system needs to handle that without mixing them up.
+- **Partial rent payment** - a tenant pays 80% of the monthly rent. Does the system accept it, reject it, or record it as a debt? What notification goes to the landlord? There's no universally correct answer - but there has to be a defined one.
+- **Disputed handover protocol** - landlord and tenant submit different meter readings at move-in. Which one is authoritative? Who can override? What's the audit trail?
+- **Expired invitation link** - a landlord invites a tenant, the tenant clicks the link days later. Does it still work? Does re-sending create a duplicate account?
+- **Contract flow without a tenant** - the app generates rental contracts, but there was no flow for how the tenant receives, accesses, or signs it. I designed that flow from scratch because it didn't exist in the inherited designs.
 
-Every edge case was written as a scoped task in the backlog - not a separate document that would get ignored. Each task had an owner, a status, and acceptance criteria. Legal-dependent items were tagged as "pending legal confirmation" with a named contact responsible for the answer.
+For questions that were legal rather than product decisions - e-signature validity, statutory deposit limits - I flagged them to external legal counsel instead of writing an assumption into the spec.
 
-I also created UML and BPMN diagrams for the core flows, so the team had a shared visual model - not just a list of text rules.
+---
 
-**Result.** Engineering started with a backlog where the hard questions were already answered. No engineer had to make a judgment call on a business rule mid-sprint. Legal questions were in the right queue, not silently embedded in a spec.
+**How I work on edge cases.**
 
-**Skills:** edge case analysis, requirements elicitation, UML, BPMN, business rule definition, legal routing, backlog structuring.
+I use AI. I feed it the project context and design, and generate a list of edge cases. Then I go through them: verify which are real, eliminate duplicates, identify which need a business decision versus a technical one. The AI speeds up the generation. The judgment on what to do about each one is mine.
+
+Every edge case that matters ends up as a scoped task in the backlog - not a separate document that nobody reads. Each task has an owner, a status, and acceptance criteria.
+
+---
+
+**Skills:** edge case analysis, AI-augmented requirements discovery, UML/BPMN, business rule definition, legal routing, backlog integration.
