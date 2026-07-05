@@ -1,7 +1,7 @@
 ![Wiktor Król](./banner.svg)
 
 **Product Owner · Business Analyst · Data Analyst**
-Ulan Software, October 2023 - present
+Ulan Software, November 2022 - present
 
 ---
 

@@ -1,6 +1,6 @@
 # Business Analyst
 
-I'm the only person writing specifications at Ulan Software. Every requirement that reaches a 15-person dev team goes through me, across 4 products and 2.5 years.
+I'm the only person writing specifications at Ulan Software. Every requirement that reaches a 15-person dev team goes through me, across 4 products and 3.5 years.
 
 ---
 
