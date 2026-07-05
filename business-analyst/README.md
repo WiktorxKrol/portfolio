@@ -1,7 +1,6 @@
 # Business Analyst — Case Studies
 
-My focus is completeness before code: turning loose ideas into requirements engineering can build without discovering gaps mid-sprint, and then making sure the backlog stays consistent as it grows.
+I'm the only person writing specifications at Ulan Software. Every requirement that reaches engineering goes through me — across four products, 2.5 years, and hundreds of tasks. My focus is completeness before code: answering the hard "what happens if…" questions before they become bugs in production.
 
-1. [Requirements and edge case discovery for a new product](./01-requirements-edge-cases.md)
-2. [Backlog consistency and traceability review](./02-backlog-consistency-review.md)
-3. [Turning quantitative UX signals into a prioritized backlog](./03-ux-signals-to-backlog.md)
+1. [Writing specifications as the sole BA in a 20-person SaaS team](./01-specification-writing.md)
+2. [Edge case discovery for a rental property management app](./02-edge-cases-proptech.md) — 80+ edge cases documented before engineering started

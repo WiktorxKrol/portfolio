@@ -1,30 +1,45 @@
 ![Wiktor Król](./banner.svg)
 
-**Product Owner / Business Analyst with hands-on Data Analytics skills (SQL, GA4, BigQuery).**
+**Product Owner at Ulan Software — 2.5 years shipping SaaS products end-to-end.**
 
-I take end-to-end ownership of a product — from the first requirement to the dashboard that proves the decision was right. I am comfortable working in cross-functional teams, managing stakeholder alignment, and using data-driven decision making instead of guessing.
+I'm the only person writing specifications at Ulan. That means I scope, analyse, and measure without a safety net — no one checks my work before it reaches engineering. I own the full cycle: backlog, sprints, specs, UAT, and the analytics pipeline that tells me whether the decision was right.
 
-## In short
+## What I've shipped
 
 | | |
 |---|---|
-| **~70** tasks | Scoped from a blank page into a full, estimated backlog — in days, not weeks. |
-| **80+** edge cases | Found and documented before engineering wrote a single line of code. |
-| **1** analytics pipeline | Connects website data (GA4) and business data (internal database), used every week to guide decisions. |
+| **600+** tasks | Scoped and delivered a full e-commerce module inside a website builder — drag-and-drop store, cart, payments, order management — over 1.5 years. Live in production. |
+| **70** tasks | Took a proptech app from a design mockup to a complete, estimated backlog in days, not weeks. |
+| **80+** edge cases | Documented before engineering wrote a single line of code. |
+| **1** analytics pipeline | Built a GA4-to-BigQuery pipeline from scratch, used every week by product leadership to make decisions. |
 
-## Read me as
+## Products I own
 
-Pick the version that matches the role you are hiring for. It is the same work — just a different focus for each audience.
+**[BOWWE](https://bowwe.com)** — AI drag-and-drop website and e-commerce builder. My main product since October 2023.
 
-- 🧭 **[Product Owner](./product-owner/)** — I scope projects, manage stakeholders, and keep several products moving forward at the same time.
-- 🔍 **[Business Analyst](./business-analyst/)** — I turn ideas into clear, complete requirements, so engineering does not discover missing rules mid-sprint.
-- 📊 **[Data Analyst](./data-analyst/)** — I build the SQL pipelines and dashboards that turn raw data into actionable insights.
+![BOWWE home](./assets/bowwe-home.png)
+
+**[Honaro](https://honaro.com)** — Service marketplace connecting customers with companies. Added to my scope in late 2024.
+
+![Honaro home](./assets/honaro-home.png)
+
+**Furniture retailer × service marketplace integration** — Cross-company integration: furniture purchases on a large e-commerce platform fulfilled by an external service provider. I started this from zero and coordinate between two external product teams.
+
+**Proptech app** — Rental property management platform for landlords, tenants, and property managers. Currently in scoping phase.
+
+## Case studies
+
+Pick the lens that matches the role you're hiring for. All case studies describe real work on the products above.
+
+- 🧭 **[Product Owner](./product-owner/)** — Backlog ownership, roadmap decisions, sprint management, stakeholder alignment, release.
+- 🔍 **[Business Analyst](./business-analyst/)** — Specifications, edge case discovery, UML/BPMN, UAT, user research.
+- 📊 **[Data Analyst](./data-analyst/)** — BigQuery, SQL, GA4, data-driven decision making.
 
 ## Contact
 
 - **Email:** wiktorkrol@gmail.com
-- **LinkedIn:** [pl.linkedin.com/in/wiktor-krol](https://pl.linkedin.com/in/wiktor-krol/pl)
+- **LinkedIn:** [linkedin.com/in/wiktor-krol](https://pl.linkedin.com/in/wiktor-krol)
 
 ---
 
-*All case studies below describe real projects. Company names and confidential figures have been generalized to protect client privacy — the process, the decisions, and the results are real.*
+*All case studies describe real projects at Ulan Software. Company names and confidential metrics have been generalized to protect client privacy — the decisions, the process, and the outcomes are real.*
