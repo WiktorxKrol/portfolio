@@ -1,19 +1,31 @@
-## Scoping a proptech app from a design mockup
+## Scoping a proptech app - picking up where someone left off
 
-> **In one line:** I turned a design mockup and a strategy document into a 70-task backlog for a rental property management app - with 80+ edge cases documented before engineering started - while managing scope pressure from investors.
+I inherited this project. What I got: incomplete design files and partial requirements from a colleague. The product is a rental property management app - landlords, tenants, property managers, all in one platform.
 
-**Situation.** A new proptech app (rental property management for landlords, tenants, and property managers) existed only as a design mockup and a strategy document. Nothing had been scoped, estimated, or written as requirements. An external investor was involved, which added pressure to move faster than the process could realistically support.
+The gap I found immediately: everything had been designed from the landlord's perspective. The tenant didn't exist in the designs.
 
-**What I did.**
+---
 
-- Took full ownership of the scoping process: read every screen and every section of the strategy document, then converted them into ~70 scoped and estimated tasks covering business analysis, design, and engineering work - roughly 570 hours of planned effort.
-- Organized the backlog into 12 epics (authentication, contract generation, payments, tenant panel, marketplace, and more) and sequenced them by technical dependency, so infrastructure was built before any feature that relied on it.
-- Ran the scoping epic by epic with a stakeholder checkpoint after each one - deliberately avoiding dumping the full backlog at once, so the investor and team could review and adjust before the next piece was committed.
-- Documented 80+ edge cases across all core flows before a single line of code was written: what happens with a disputed handover protocol, a partial rent payment, a tenant who has two roles in the system, an expired invitation link.
-- Extracted implied business rules from the mockup - default notice periods, what counts as a missed payment, deposit calculation rules - and wrote them down explicitly so engineering did not have to guess.
-- Identified which rules were actually legal questions (e-signature validity, statutory deposit limits, contract enforceability) and routed them to external legal counsel instead of treating them as product decisions.
-- Created UML and BPMN diagrams for the core flows so the team had a shared, visual understanding of the process - not just a text description.
+**What that meant in practice.**
 
-**Result.** Engineering started with a complete, reviewed backlog and answered edge cases. Legal-dependent items were clearly labeled as pending, not silently assumed. Stakeholder alignment was maintained throughout despite pressure to skip steps.
+The landlord side had UI designs. The tenant side had nothing. That's not a small gap - in a rental platform, the tenant is half the product. Every flow that landlords initiate has to land somewhere on the tenant's end.
 
-**Skills:** requirement scoping, edge case analysis, UML/BPMN, backlog structuring, dependency planning, legal routing, stakeholder management under pressure.
+I worked through the landlord flows and mapped what was missing on the tenant side. One example: the contract flow. The app has a contract generator - landlords can create rental agreements. But there was no flow for how the tenant receives the contract, accesses it, or signs it. The landlord flow ended at "contract generated" with nowhere for that contract to go.
+
+I designed the tenant side of that flow myself - invitation, access, signing - based on competitive benchmarking and business logic. I didn't ask the investor what it should look like. I proposed it, we discussed it, and it went into the backlog.
+
+I did this for several missing flows. Each time the same process: identify the gap, benchmark how others solve it, propose a solution, align with the investor.
+
+---
+
+**The broader scoping work.**
+
+Beyond filling the tenant gaps, I was responsible for the full backlog: ~70 tasks across 12 epics, roughly 570 hours of planned work. I sequenced them by dependency - authentication before contracts, contracts before payments.
+
+I also documented 80+ edge cases before development started. The ones that come up in rental platforms are genuinely complicated: a tenant who is also a property manager in another property needs two separate permission contexts in the same account. A partial rent payment needs a decision - accept, reject, or flag as debt. These aren't edge cases you can leave for engineering to figure out mid-sprint.
+
+Where questions were legal rather than product decisions - e-signature validity, statutory deposit limits - I flagged them explicitly and routed them to external legal counsel instead of writing an assumption into the spec.
+
+---
+
+**Skills:** scope gap analysis, flow design from scratch, competitive benchmarking, stakeholder alignment, edge case documentation, UML/BPMN, legal routing, dependency-based backlog sequencing.
