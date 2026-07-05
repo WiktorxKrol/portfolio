@@ -10,7 +10,19 @@ I brought this to the CEO. The e-commerce module was already on the roadmap - bu
 
 I owned the entire scope of the e-commerce module myself. At Ulan, I'm the only person writing specifications - so every one of the 600+ tasks that went into this module was written, estimated, and sequenced by me.
 
-The module covers: store setup, product catalogue, cart and checkout, payment integration, order management, customer accounts, and email notifications. Each of those is its own epic with its own dependencies. Payments can't exist before cart. Cart can't exist before products. The sequence matters.
+The module covers 7 epics:
+
+- **Store setup** - creating and configuring an online store: name, domain, currency, language, tax settings, shipping rules
+- **Products** - product catalogue management: adding products, variants, pricing, inventory, categories, images
+- **Cart** - adding products, managing quantities, applying discount codes, calculating totals with tax
+- **Payments** - payment gateway integration, transaction processing, handling payment states (pending, completed, failed, refunded)
+- **Orders** - order lifecycle management: confirmation, fulfillment status, cancellations, order history for the merchant
+- **Customer accounts** - registration, login, order history and tracking from the customer's side
+- **Emails** - transactional notifications: order confirmation, shipping update, payment receipt, cancellation
+- **Stripe** - payment processing integration: cards, Apple Pay, Google Pay, webhooks for payment status updates
+- **Base.com** - integration with a Polish e-commerce platform for product and order synchronization
+
+Each epic depends on the previous one. Payments can't exist before cart. Cart can't exist before products. The sequence is not arbitrary - it's the order in which the system has to be built.
 
 The hardest part wasn't writing the tasks - it was catching conflicts between them. E-commerce has to have consistent logic across the entire flow, and when you're writing 600 tasks across multiple epics over many months, inconsistencies hide.
 
