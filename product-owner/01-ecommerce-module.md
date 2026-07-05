@@ -1,21 +1,31 @@
-## Building an e-commerce module inside a website builder
+## E-commerce module in BOWWE - 600 tasks, 1.5 years, live in production
 
-> **In one line:** I scoped and delivered 600+ tasks over 1.5 years to add a full e-commerce capability to BOWWE - a drag-and-drop website builder - including store setup, cart, payments, and order management. It's live in production.
+About six months into my time at BOWWE, I looked at our onboarding survey data and saw that around 40% of users who signed up said they came to build an online store. BOWWE at the time was a website builder - no e-commerce existed. Those users were registering, finding out they couldn't do what they came to do, and leaving without paying.
 
-**Situation.** BOWWE is a website builder. Users can build landing pages and websites without writing code. The next logical step was e-commerce: let users build and run an online store inside the same tool. No e-commerce existed in the product at all - it had to be built from scratch, alongside ongoing maintenance of the existing product.
+I brought this to the CEO. The e-commerce module was already on the roadmap - but far out. We moved it up. That conversation happened because of the data, not despite it.
 
-**What I did.**
+---
 
-Owned the entire product scope for the e-commerce module from day one:
+**What I actually did for 1.5 years.**
 
-- Broke the module into epics - store setup, product catalogue, cart and checkout, payment integration, order management, customer accounts, email notifications - and sequenced them by dependency so payment infrastructure was in place before checkout existed.
-- Wrote every specification myself. At Ulan, I'm the only person writing specs, so every requirement that reached engineering came through me. Each spec included acceptance criteria, edge cases, and explicit rules for what happens when something goes wrong.
-- Ran ongoing grooming and planning poker sessions with the dev team to estimate tasks and keep the backlog realistic.
-- Made deliberate scope decisions throughout. The clearest one: I cut the invoicing module from the MVP. Users already have invoicing tools they trust. Building our own would take significant engineering time and produce something users would not switch to. The right call was to integrate with existing tools in a later version - not compete with them on day one.
-- Monitored production bugs, prioritized them against feature work, and coordinated fixes with engineers per sprint.
-- Ran UAT sessions with clients before each significant release to validate behaviour before it went to all users.
-- Presented new e-commerce features to clients in demos.
+I owned the entire scope of the e-commerce module myself. At Ulan, I'm the only person writing specifications - so every one of the 600+ tasks that went into this module was written, estimated, and sequenced by me.
 
-**Result.** The e-commerce module is live in BOWWE and used in production. The invoicing decision kept the MVP timeline realistic and focused engineering effort on the features that actually drive store creation.
+The module covers: store setup, product catalogue, cart and checkout, payment integration, order management, customer accounts, and email notifications. Each of those is its own epic with its own dependencies. Payments can't exist before cart. Cart can't exist before products. The sequence matters.
 
-**Skills:** product scoping, backlog ownership, specification writing, sprint management, acceptance criteria, scope prioritization, UAT, stakeholder demos, bug triage.
+The hardest part wasn't writing the tasks - it was catching conflicts between them. E-commerce has to have consistent logic across the entire flow, and when you're writing 600 tasks across multiple epics over many months, inconsistencies hide.
+
+The one that comes to mind: checkout price display and tax group definitions. One task assumed prices would be shown with tax included or excluded based on a simple country rule. Another task, written separately, defined how tax groups would be configured per product. The two didn't talk to each other - if both went to production as written, users in certain regions would see wrong prices or get an error at payment. I caught it during cross-referencing before it reached a sprint.
+
+I also made scope calls throughout. The clearest one: I cut the invoicing module from the MVP. Users already have invoicing tools they use and trust. Building our own would take real engineering time and produce something they wouldn't switch to. I documented the decision and the reasoning - integrate later, don't compete with tools users already rely on.
+
+---
+
+**The numbers.**
+
+600+ tasks. 12 epics. 1.5 years. Live in production.
+
+I ran grooming and planning poker sessions with the dev team throughout. I wrote acceptance criteria for every task. I ran UAT sessions with clients before significant releases. I monitored production bugs and prioritized them against feature work each sprint.
+
+---
+
+**Skills:** product scoping, specification writing, conflict detection across large backlogs, acceptance criteria, sprint management, UAT, scope prioritization, bug triage.
