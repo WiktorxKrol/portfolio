@@ -1,35 +1,39 @@
-## Building a GA4-to-BigQuery analytics pipeline from scratch
+## GA4 + BigQuery - from unused data to a decision that changed onboarding
 
-> **In one line:** I set up BigQuery and built a pipeline that joins website analytics (GA4) with internal business data - because a colleague had GA4 running but no one was doing anything with the data, and we were making product decisions by guessing.
+GA4 was running on BOWWE. Nobody was using it beyond the basics.
 
-**Situation.** A colleague had set up GA4 tracking on BOWWE. The raw data was there, but it lived in GA4's interface - disconnected from our internal database (the source of truth for signups, published sites, and revenue). Product and growth teams had no reliable way to see where users actually dropped off in the funnel.
+I wanted to know what was actually happening with users - conversion rate, how often they logged in, which pages they visited before signing up, whether the pricing page converted. The GA4 interface gave surface-level numbers but couldn't answer the question I cared about most: what does the full journey look like, from first visit to paid plan, for a single user?
 
-Two problems made GA4 alone unreliable:
-1. Ad blockers and consent choices make 10–15% of user behavior invisible to GA4.
-2. GA4 cannot be trusted for revenue metrics - it misses too many conversion events.
+The problem is that GA4 tracks anonymous sessions before login and assigns a pseudo ID. Our database has a real user ID after signup. Those two are disconnected by default. I read that you can join them in BigQuery on the session where the signup event fires - so that's what I built.
 
-The internal database was the opposite problem: it could tell you who paid, but not what they did before signing up.
+---
 
-**What I built.**
+**What I found.**
 
-I set up the BigQuery project from zero and then built the pipeline:
+Churn was at around 12%. Industry benchmark for SaaS is under 5%. That was the first number that made people pay attention.
 
-- **Flattened the GA4 export.** GA4 stores event parameters as nested arrays (`RECORD REPEATED` fields). You cannot query them directly - every parameter requires an `UNNEST`. I wrote a clean view layer so analysts could query `page_location` or `session_id` without knowing the raw schema.
+The second finding was about login frequency. I found a correlation between number of logins and the probability of a user buying a paid plan. Going from 1 login to 6 logins made a user 8x more likely to purchase. That's not a small effect - that's a signal strong enough to reorganize priorities around.
 
-- **Connected anonymous to identified users.** GA4 assigns a random ID before login. Our database has a real user ID after signup. I joined them on the session where the signup event fired, so the full journey - from first visit to paid plan - links to one person.
+The third: users weren't publishing their sites fast enough. The time between registration and first publish was longer than it should be, and users who didn't publish early rarely came back.
 
-- **Rebuilt sessions.** GA4's raw export does not give you session boundaries. I reconstructed sessions from the `ga_session_id` event parameter, grouping events into sessions with start times, end times, and page sequences.
+---
 
-- **Built a funnel view with a source split.** The funnel has two parts: early (visit → pricing page → registration) where GA4 is reliable, and late (registration → publish → paid) where the internal database is the source of truth. I joined them at the registration event - the one step both systems capture - to get a complete, trustworthy funnel in one view.
+**What changed.**
 
-- **Built a weekly summary for non-technical stakeholders.** Leadership should not need to write SQL to see conversion rates. I created a summary view that feeds directly into a BI dashboard - updated automatically, no manual export.
+I brought these findings to the CEO and marketing team. We worked on onboarding. The goal became simple: get the user into the builder and to their first published site as fast as possible, removing everything in the way.
 
-**Why this mattered for product decisions.**
+We cut interruption screens, unnecessary modals, steps that added friction before the user had seen any value. The logic: if 6 logins means 8x more likely to buy, the job is to give users a reason to come back 6 times - and that starts with making the first session worth returning for.
 
-Before the pipeline, "where do users drop off?" was answered by gut feel or by whoever last looked at the GA4 interface. After the pipeline, product leadership had a specific answer every week - which step, how many users, how it changed after a release. Feature prioritization for onboarding improvements shifted from opinion to data.
+---
 
-**Result.** A working analytics pipeline used weekly by product leadership. Built from scratch - no existing BigQuery project, no existing data model, no existing documentation of the GA4 schema.
+**How this was built.**
 
-**Note on how this was built.** I'm not a data engineer. I understood the problem, knew what questions I needed to answer, and used AI to accelerate the implementation - writing and debugging SQL, understanding the GA4 export schema, and structuring the BigQuery views. The thinking, the architecture decisions, and the product logic behind the pipeline are mine. The speed came from AI. I think that's the right way to work in 2025.
+I'm not a data engineer. I understood the problem, knew what questions I needed to answer, and used AI to accelerate the implementation - writing and debugging SQL, understanding the GA4 export schema (`RECORD REPEATED` fields that require `UNNEST` to query), structuring the BigQuery views. I also read a lot. I learn something new every day and this project gave me plenty of reasons to.
 
-**Skills:** BigQuery setup, GA4 export schema, SQL, UNNEST, session reconstruction, funnel analysis, data pipeline design, BI dashboard integration.
+The thinking, the questions, and the decisions that came out of the data are mine. The speed came from AI.
+
+The output: a set of BigQuery views and a Data Studio dashboard that marketing and leadership check without asking me for a report.
+
+---
+
+**Skills:** BigQuery, SQL, GA4 export schema, session reconstruction, funnel analysis, churn analysis, Data Studio, translating data into product decisions.
