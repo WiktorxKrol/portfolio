@@ -30,4 +30,6 @@ Before the pipeline, "where do users drop off?" was answered by gut feel or by w
 
 **Result.** A working analytics pipeline used weekly by product leadership. Built from scratch - no existing BigQuery project, no existing data model, no existing documentation of the GA4 schema.
 
+**Note on how this was built.** I'm not a data engineer. I understood the problem, knew what questions I needed to answer, and used AI to accelerate the implementation - writing and debugging SQL, understanding the GA4 export schema, and structuring the BigQuery views. The thinking, the architecture decisions, and the product logic behind the pipeline are mine. The speed came from AI. I think that's the right way to work in 2025.
+
 **Skills:** BigQuery setup, GA4 export schema, SQL, UNNEST, session reconstruction, funnel analysis, data pipeline design, BI dashboard integration.
