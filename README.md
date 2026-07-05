@@ -28,6 +28,18 @@ Three things I bring that are harder to find than they look:
 
 ---
 
+## Tools and skills
+
+| | |
+|---|---|
+| **Analytics** | SQL, BigQuery, GA4, Google Data Studio |
+| **Modelling** | UML, BPMN |
+| **Product** | Jira, Confluence, GitLab, Slack, Mattermost |
+| **Design** | Figma (mockups and wireframes) |
+| **Other** | Google Sheets, user research, RICE prioritization |
+
+---
+
 ## Case studies
 
 - 🧭 **[Product Owner](./product-owner/)** - Backlog ownership, roadmap decisions, sprint management, stakeholder alignment, release.
