@@ -1,18 +1,29 @@
-## Delivering a cross-company integration from zero
+## Coordinating a three-way integration with TaskRabbit
 
-> **In one line:** I started a three-way integration between two external companies and our team from a blank page - coordinating across product teams in different organizations to hit a fixed delivery deadline.
+I was assigned this project. What I got on day one: technical documentation from the furniture retailer with test cases. Everything else came in over time - business model diagrams, meeting notes, follow-up specs.
 
-**Situation.** A large furniture retailer wanted to offer assembly as an add-on at checkout: customers buy furniture, and a third-party service provider handles the assembly booking. Three separate systems needed to talk to each other. I was brought in with no existing setup - no Slack workspace, no shared backlog, no defined process between the three teams.
+The setup: a large furniture retailer wanted to offer assembly as an add-on at checkout. Customers buy furniture on their platform, TaskRabbit handles the assembly booking. Three systems need to talk to each other. We're the integrator in the middle.
 
-**What I did.**
+---
 
-- Set up the entire project infrastructure from scratch: Slack workspace, project channels, shared documentation structure.
-- Mapped the integration flow end-to-end: what data needs to pass between systems, at what point in the order lifecycle, and who owns each part of the handoff.
-- Attended and facilitated all coordination meetings between the three teams, including working sessions with product owners from both external companies.
-- Structured the work as a dependency checklist - API access, staging environments, credential handoffs - each item with a named owner and a status, so nothing got lost between organizations.
-- Followed up on blocking items individually rather than waiting for joint meetings, because joint meetings across three teams on different timelines are slow.
-- Kept the project moving toward the delivery deadline by maintaining a clear view of what was done, what was in progress, and what was still blocking.
+**What my job actually was.**
 
-**Result.** The integration is in progress and on track for the agreed deadline. All three teams have a shared working structure that did not exist before I set it up.
+Not product thinking - execution. My KPI wasn't coming up with ideas. It was making sure my team delivered on time. And they did, because the work was organized well.
 
-**Skills:** cross-company collaboration, project setup from zero, stakeholder management, dependency tracking, deadline-driven execution.
+Between meetings I was translating business requirements into sprint scope and into functional and non-functional requirements my team could build against. The documentation we received was written from a business perspective. My job was to turn it into tasks engineers could pick up without asking me what it meant.
+
+One example: the furniture retailer's system updates order status when furniture ships, but they don't push that information to us. We had to build polling - periodically querying their system to check for updates. That wasn't my idea, it came from the developer. But I made sure it became a properly scoped task with the additional information we needed from the retailer's side to implement it.
+
+---
+
+**Who I coordinated with.**
+
+On my side: 2 developers, a tester, and a tech lead. On TaskRabbit's side: I worked directly with their Product Owner, who managed their team internally. On the retailer's side: I worked with their DevOps.
+
+The time zone difference was actually useful - it gave us time to align internally before responding to the other teams.
+
+The collaboration worked well. TaskRabbit was organized and helpful. The different internal processes between three companies could have been a problem - it wasn't, because everyone came to meetings prepared.
+
+---
+
+**Skills:** cross-company coordination, requirements translation, sprint scoping, functional and non-functional requirements, stakeholder management across organizations.
